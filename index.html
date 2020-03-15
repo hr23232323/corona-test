@@ -44,14 +44,23 @@
 
     <div id="section3" class="content">
         <section class="section">
-            <div>
+            <div class="question-content">
                 <h1>Select the symptoms that apply to you</h1>
                 <form id="question2" class="screen-question" onsubmit="return false">
-                    <input type="checkbox" value="cough">
-                    <input type="checkbox" value="runny-nose">
-                    <input type="checkbox" value="shortness of breath">
-                    <input type="checkbox" value="fever">
-                    <input type="button" onclick="checkHandler(this)">
+                    <div class="check-group">
+                        <div class="check-option">
+                            <input id="symp1" type="checkbox" value="cough">
+                            <label for="symp1" class="check-label">Cough</label>
+                        </div>
+                        <div class="check-option">
+                            <input id="symp2" type="checkbox" value="runny-nose">
+                            <label for="symp2" class="check-label">Runny Nose</label>
+                        </div>
+                        <div class="check-option">
+                            <input id="symp3" type="checkbox" value="short-breath"> <label for="symp3" class="check-label">Shortness of Breath</label>
+                        </div>
+                    </div>
+                    <input type="button" onclick="checkHandler(this)" value="Next question">
                 </form>
             </div>
         </section>

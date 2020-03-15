@@ -57,7 +57,15 @@ h6 {
 }
 
 .question-content {
-    width: 100%
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.screen-question {
+    height: 25%;
 }
 
 /*-------- BUTTONS -------------*/
@@ -69,4 +77,36 @@ h6 {
     margin: 10px;
     padding: 10px;
     flex-grow: 1;
+}
+
+/*-------- CHECKS -------------*/
+
+.check-group {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.check-option {
+    margin: 10px;
+    flex-grow: 1;
+    height: auto;
+}
+
+.check-label {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check-option input[type=checkbox] {
+    display: none;
+}
+
+.check-option input[type=checkbox]:checked + .check-label {
+    background-color: green;
 }
