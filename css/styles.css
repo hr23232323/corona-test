@@ -101,6 +101,12 @@ h6 {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: hsl(0, 70%, 94%)
+}
+
+.check-label:hover {
+    cursor: pointer;
+    background-color: aliceblue;
 }
 
 .check-option input[type=checkbox] {
@@ -108,5 +114,5 @@ h6 {
 }
 
 .check-option input[type=checkbox]:checked + .check-label {
-    background-color: green;
+    background-color: hsl(0, 60%, 74%);
 }
