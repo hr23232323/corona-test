@@ -13,3 +13,20 @@ h5,
 h6 {
     font-family: var(--h-font), Helvetica, sans-serif;
 }
+
+
+
+/*--------LAYOUT-------------*/
+.content {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.section {
+    width: 70%;
+    height: 60%;
+}
