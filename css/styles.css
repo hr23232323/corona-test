@@ -55,3 +55,18 @@ h6 {
 .main-section {
     text-align: center;
 }
+
+.question-content {
+    width: 100%
+}
+
+/*-------- BUTTONS -------------*/
+.btn-group {
+    display: flex
+}
+
+.btn-group input {
+    margin: 10px;
+    padding: 10px;
+    flex-grow: 1;
+}

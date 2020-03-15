@@ -18,10 +18,10 @@
 <body>
     <div id="section1" class="content">
         <section class="main-section section">
-            <div>
+            <div class="question-content">
                 <h1>Welcome to the Coronavirus screening questionnaire</h1>
                 <h3 class="disclaimer">The Content is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</h3>
-                <a href="#section2">Begin Screening Questionnaire</a>
+                <a onClick="nextSection(0)">Begin Screening Questionnaire</a>
 
             </div>
         </section>
@@ -29,11 +29,13 @@
 
     <div id="section2" class="content">
         <section class="section">
-            <div>
+            <div class="question-content">
                 <h1>Have you travelled outside the US in the last 2 weeks?</h1>
                 <form id="question1" class="screen-question" onsubmit="return false">
-                    <input type="button" value="yes" onclick="buttonHandler(this)">
-                    <input type="button" value="no" onclick="buttonHandler(this)">
+                    <div class="btn-group">
+                        <input type="button" value="yes" onclick="buttonHandler(this)">
+                        <input type="button" value="no" onclick="buttonHandler(this)">
+                    </div>
                 </form>
 
             </div>
@@ -61,6 +63,21 @@
             </div>
         </section>
     </div>
+    <div id="section5" class="content">
+        <section class="section">
+            <div>
+                <h1>Another questions</h1>
+            </div>
+        </section>
+    </div>
+    <script>
+        function nextSection(currentSection) {
+            nextSection = "section" + String(parseInt(currentSection) + 2);
+            //console.log(nextSection)
+            document.getElementById(nextSection).scrollIntoView();
+        }
+
+    </script>
     <script src="scripts/main.js"></script>
 </body>
 

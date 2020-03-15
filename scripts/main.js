@@ -1,13 +1,17 @@
 function buttonHandler(ele) {
     var btn = ele
-    var form = ele.parentElement
+    var form = ele.parentElement.parentElement
 
 
 
 
-
-    nextSection(form.id.slice(-1));
-
+    currentSection = parseInt(form.id.slice(-1))
+    if (currentSection < 10) {
+        nextSection = "section" + String(currentSection + 2);
+        document.getElementById(nextSection).scrollIntoView();
+    } else {
+        // end quiz
+    }
 }
 
 function checkHandler(ele) {
@@ -17,15 +21,16 @@ function checkHandler(ele) {
 
 
 
-    nextSection(form.id.slice(-1));
+
+    currentSection = parseInt(form.id.slice(-1))
+    if (currentSection < 10) {
+        nextSection = "section" + String(currentSection + 2);
+        document.getElementById(nextSection).scrollIntoView();
+    } else {
+        // end quiz
+    }
 }
 
-
-function nextSection(currentSection) {
-    nextSection = "section" + String(parseInt(currentSection) + 2);
-    console.log(nextSection)
-    window.location.href = '#' + nextSection
-}
 
 function endQuiz() {
 
