@@ -52,7 +52,10 @@
                         <input name="age_group" type="button" value="<20" onclick="buttonHandler(this)">
                         <input name="age_group" type="button" value="20-35" onclick="buttonHandler(this)">
                         <input name="age_group" type="button" value="35-50" onclick="buttonHandler(this)">
-                        <input name="age_group" type="button" value="50+" onclick="buttonHandler(this)">
+                    </div>
+                    <div class="btn-group">
+                        <input name="age_group" type="button" value="50-60" onclick="buttonHandler(this)">
+                        <input name="age_group" type="button" value="60+" onclick="buttonHandler(this)">
                     </div>
                 </form>
 
@@ -60,11 +63,55 @@
         </section>
     </div>
 
-    <div id="section3" class="content">
+    <div id="section4" class="content">
+        <section class="section">
+            <div class="question-content">
+                <h1>Select any of the following conditions that apply to you</h1>
+                <form id="question3" class="screen-question screen-question-check" onsubmit="return false">
+                    <div class="check-group">
+                        <div class="check-option">
+                            <input id="cond1" type="checkbox" value="heart_disease" name="cond1:heart_disease">
+                            <label for="cond1" class="check-label">Heart Disease</label>
+                        </div>
+                        <div class="check-option">
+                            <input id="cond2" type="checkbox" value="diabetes" name="cond2:diabetes">
+                            <label for="cond2" class="check-label">Diabetes</label>
+                        </div>
+                        <div class="check-option">
+                            <input id="cond3" type="checkbox" value="lung_disease" name="cond3:lung_disease">
+                            <label for="cond3" class="check-label">Lung Disease</label>
+                        </div>
+                    </div>
+                    <div class="check-group">
+                        <div class="check-option">
+                            <input id="cond4" type="checkbox" value="resp_problems" name="cond4:resp_problems">
+                            <label for="cond4" class="check-label">Respiratory Problems</label>
+                        </div>
+                        <div class="check-option">
+                            <input id="cond5" type="checkbox" value="cancer" name="cond5:cancer">
+                            <label for="cond5" class="check-label">Cancer</label>
+                        </div>
+                        <div class="check-option">
+                            <input id="cond6" type="checkbox" value="smoking" name="cond6:smoking">
+                            <label for="cond6" class="check-label">Current Smoker</label>
+                        </div>
+                        <div class="check-option">
+                            <input id="cond7" type="checkbox" value="other_issues" name="cond7:other_issues">
+                            <label for="cond7" class="check-label">Other Chronic Issues</label>
+                        </div>
+                    </div>
+                    <input type="button" onclick="checkHandler(this)" value="Next question">
+                </form>
+            </div>
+        </section>
+    </div>
+
+
+    <div id="section5" class="content">
         <section class="section">
             <div class="question-content">
                 <h1>Select the symptoms that apply to you</h1>
-                <form id="question2" class="screen-question screen-question-check" onsubmit="return false">
+                <form id="question4" class="screen-question screen-question-check" onsubmit="return false">
                     <div class="check-group">
                         <div class="check-option">
                             <input id="symp1" type="checkbox" value="cough" name="sym1:cough">
@@ -103,13 +150,6 @@
                     </div>
                     <input type="button" onclick="checkHandler(this)" value="Next question">
                 </form>
-            </div>
-        </section>
-    </div>
-    <div id="section4" class="content">
-        <section class="section">
-            <div>
-                <h1>Another questions</h1>
             </div>
         </section>
     </div>

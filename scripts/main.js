@@ -16,7 +16,7 @@ function buttonHandler(ele) {
     dataObj[btn.name] = btn.value
 
     currentSection = parseInt(form.id.slice(-1))
-    if (currentSection < 2) {
+    if (currentSection < 4) {
         nextSection = "section" + String(currentSection + 2);
         document.getElementById(nextSection).scrollIntoView();
     } else {
@@ -35,7 +35,7 @@ function checkHandler(ele) {
 
 
     currentSection = parseInt(form.id.slice(-1))
-    if (currentSection < 2) {
+    if (currentSection < 4) {
         nextSection = "section" + String(currentSection + 2);
         document.getElementById(nextSection).scrollIntoView();
     } else {
