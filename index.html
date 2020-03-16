@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -30,11 +31,11 @@
     <div id="section2" class="content">
         <section class="section">
             <div class="question-content">
-                <h1>Have you travelled outside the US in the last 2 weeks?</h1>
+                <h1>Have you travelled outside the US in the last 4 weeks?</h1>
                 <form id="question1" class="screen-question" onsubmit="return false">
                     <div class="btn-group">
-                        <input type="button" value="yes" onclick="buttonHandler(this)">
-                        <input type="button" value="no" onclick="buttonHandler(this)">
+                        <input name="outside_us_travel" type="button" value="yes" onclick="buttonHandler(this)">
+                        <input name="outside_us_travel" type="button" value="no" onclick="buttonHandler(this)">
                     </div>
                 </form>
 
@@ -46,40 +47,40 @@
         <section class="section">
             <div class="question-content">
                 <h1>Select the symptoms that apply to you</h1>
-                <form id="question2" class="screen-question" onsubmit="return false">
+                <form id="question2" class="screen-question screen-question-check" onsubmit="return false">
                     <div class="check-group">
                         <div class="check-option">
-                            <input id="symp1" type="checkbox" value="cough">
+                            <input id="symp1" type="checkbox" value="cough" name="sym1:cough">
                             <label for="symp1" class="check-label">Cough</label>
                         </div>
                         <div class="check-option">
-                            <input id="symp2" type="checkbox" value="stuffy-nose">
+                            <input id="symp2" type="checkbox" value="stuffy-nose" name="sym2:stuffy_nose">
                             <label for="symp2" class="check-label">Stuffy Nose</label>
                         </div>
                         <div class="check-option">
-                            <input id="symp3" type="checkbox" value="short-breath"> <label for="symp3" class="check-label">Shortness of Breath</label>
+                            <input id="symp3" type="checkbox" value="short-breath" name="sym3:short_breath"> <label for="symp3" class="check-label">Shortness of Breath</label>
                         </div>
                     </div>
                     <div class="check-group">
                         <div class="check-option">
-                            <input id="symp4" type="checkbox" value="chest-pressure">
+                            <input id="symp4" type="checkbox" value="chest-pressure" name="sym4:chest_pressure">
                             <label for="symp4" class="check-label">Pressure in Chest</label>
                         </div>
                         <div class="check-option">
-                            <input id="symp5" type="checkbox" value="fever">
+                            <input id="symp5" type="checkbox" value="fever" name="sym5:fever">
                             <label for="symp5" class="check-label">Fever</label>
                         </div>
                         <div class="check-option">
-                            <input id="symp6" type="checkbox" value="sore-throat"> <label for="symp6" class="check-label">Sore Throat</label>
+                            <input id="symp6" type="checkbox" value="sore-throat" name="sym6:sore_throat"> <label for="symp6" class="check-label">Sore Throat</label>
                         </div>
                     </div>
                     <div class="check-group">
                         <div class="check-option">
-                            <input id="symp7" type="checkbox" value="worsening-conditions">
+                            <input id="symp7" type="checkbox" value="worsening-conditions" name="sym7:worsening_conditions">
                             <label for="symp7" class="check-label">Worsening Conditions</label>
                         </div>
                         <div class="check-option">
-                            <input id="symp8" type="checkbox" value="fatigue">
+                            <input id="symp8" type="checkbox" value="fatigue" name="sym8:fatigue">
                             <label for="symp8" class="check-label">Fatigue</label>
                         </div>
                     </div>
@@ -95,10 +96,10 @@
             </div>
         </section>
     </div>
-    <div id="section5" class="content">
+    <div id="quizResults" class="content">
         <section class="section">
             <div>
-                <h1>Another questions</h1>
+                <h1>END OF QUIZ</h1>
             </div>
         </section>
     </div>

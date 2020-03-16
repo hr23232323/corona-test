@@ -44,7 +44,7 @@ h6 {
 
 .section {
     width: 70%;
-    height: 80%;
+    height: 70%;
     display: flex;
     align-items: center;
 
@@ -65,7 +65,17 @@ h6 {
 }
 
 .screen-question {
-    height: 25%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.screen-question-check {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /*-------- BUTTONS -------------*/
@@ -84,13 +94,18 @@ h6 {
     padding: 10px;
 }
 
+.screen-question-check input[type=button] {
+    margin: 20px;
+    padding: 10px;
+}
+
 /*-------- CHECKS -------------*/
 
 .check-group {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 100%;
+    height: 25%;
     justify-content: space-around;
 }
 
