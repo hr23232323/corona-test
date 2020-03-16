@@ -46,6 +46,23 @@
     <div id="section3" class="content">
         <section class="section">
             <div class="question-content">
+                <h1>What age group do you fall in?</h1>
+                <form id="question2" class="screen-question" onsubmit="return false">
+                    <div class="btn-group">
+                        <input name="age_group" type="button" value="<20" onclick="buttonHandler(this)">
+                        <input name="age_group" type="button" value="20-35" onclick="buttonHandler(this)">
+                        <input name="age_group" type="button" value="35-50" onclick="buttonHandler(this)">
+                        <input name="age_group" type="button" value="50+" onclick="buttonHandler(this)">
+                    </div>
+                </form>
+
+            </div>
+        </section>
+    </div>
+
+    <div id="section3" class="content">
+        <section class="section">
+            <div class="question-content">
                 <h1>Select the symptoms that apply to you</h1>
                 <form id="question2" class="screen-question screen-question-check" onsubmit="return false">
                     <div class="check-group">
