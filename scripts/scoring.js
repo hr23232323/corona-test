@@ -11,49 +11,49 @@ function setScores() {
     }
     switch (dataObj.sym1_cough) {
         case true:
-            // high risk condition
-            symp_score += 1
+            // high risk
+            symp_score += 2
             break;
     }
     switch (dataObj.sym2_stuffy_nose) {
         case true:
-            // high risk condition
+            // low risk
             symp_score += 1
             break;
     }
     switch (dataObj.sym3_short_breath) {
         case true:
-            // high risk condition
+            // high risk
             symp_score += 2
             break;
     }
     switch (dataObj.sym4_chest_pressure) {
         case true:
-            // high risk condition
+            // high risk
             symp_score += 2
             break;
     }
     switch (dataObj.sym5_fever) {
         case true:
-            // high risk condition
+            // high risk
             symp_score += 2
             break;
     }
     switch (dataObj.sym6_sore_throat) {
         case true:
-            // high risk condition
+            // low risk
             symp_score += 1
             break;
     }
     switch (dataObj.sym7_worsening_conditions) {
         case true:
-            // high risk condition
+            // high risk
             symp_score += 2
             break;
     }
     switch (dataObj.sym8_fatigue) {
         case true:
-            // high risk condition
+            // low risk
             symp_score += 1
             break;
     }
@@ -74,43 +74,43 @@ function setScores() {
     }
     switch (dataObj.cond1_heart_disease) {
         case true:
-            // high risk condition
+            // high risk
             risk_score += 2
             break;
     }
     switch (dataObj.cond2_diabetes) {
         case true:
-            // high risk condition
+            // high risk
             risk_score += 2
             break;
     }
     switch (dataObj.cond3_lung_disease) {
         case true:
-            // high risk condition
+            // high risk
             risk_score += 2
             break;
     }
     switch (dataObj.cond4_resp_problems) {
         case true:
-            // high risk condition
-            risk_score += 1
+            // high risk
+            risk_score += 2
             break;
     }
     switch (dataObj.cond5_cancer) {
         case true:
-            // high risk condition
+            // high risk
             risk_score += 1
             break;
     }
     switch (dataObj.cond6_smoking) {
         case true:
-            // high risk condition
+            // high risk
             risk_score += 1
             break;
     }
     switch (dataObj.cond7_other_issues) {
         case true:
-            // high risk condition
+            // high risk
             risk_score += 1
             break;
     }
@@ -129,19 +129,19 @@ function getRec() {
     var links
 
     // Range- symp 0-14 | risk 0-12
-    if (symp_score > 6 && risk_score > 5) {
+    if (symp_score > 4 && risk_score > 3) {
         // high risk, high symp+cond; medical help
         console.log("high risk, high symp+cond; medical help")
         header = "You are at high risk for serious illness from COVID-19"
         body = "Given a combination of your travel history, age, symptoms and/or serious long-term health problems, we suggest calling your healthcare provider for medical advice. Tell them you have or may have COVID-19, to help the office protect themselves and other patients, while best assisting you."
         links = `Please checkout the following page for more information: <a href="https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/steps-when-sick.html">CDC Guidelines</a>`
-    } else if (symp_score > 5 && risk_score <= 5) {
+    } else if (symp_score > 4 && risk_score <= 3) {
         // high symp+cond, low risk; home
         console.log("high symp, low risk")
         header = "You are at low risk for serious illness from COVID-19, but might be infected by the virus"
         body = "Stay home: People who are mildly ill with COVID-19 are able to recover at home. Do not leave, except to get medical care. Do not visit public areas. If your symptoms get worse, call your doctor’s office or emergency department, and tell them you have or may have COVID-19. Be sure to get care if you feel worse or you think it is an emergency."
         links = `Please checkout the following page for more information: <a href="https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/caring-for-yourself-at-home.html">CDC Guidelines</a>`
-    } else if (symp_score <= 5 && risk_score > 4) {
+    } else if (symp_score <= 4 && risk_score > 3) {
         // low symp+cond, high risk; home
         console.log("low symp, high risk")
         header = "You are at a high risk for serious illness from COVID-19, but are not showing concering symptoms"

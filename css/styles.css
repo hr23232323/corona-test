@@ -81,11 +81,21 @@ h6 {
     justify-content: center;
 }
 
+.footer {
+    font-size: 12px;
+    font-style: italic;
+    margin: 5px 20px;
+    text-align: center;
+}
 
 /*----------STYLES-----------*/
 .disclaimer {
     font-size: 12px;
     font-style: italic;
+}
+
+#quizResults {
+    height: 90%;
 }
 
 #quizResults h1 {
