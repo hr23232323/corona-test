@@ -1,9 +1,6 @@
 var dataObj = {};
 
 
-// Link to google sheet-
-// https://docs.google.com/spreadsheets/d/1v1r_rlWf50q23dfASJ-erIgS4r3J2yvsn_FOJKfTJLs/edit#gid=0
-
 var $form = $('form#test-form'),
     url = "https://script.google.com/macros/s/AKfycbw6i7GIDgpclcbWV8O231kwvdhJBeJB7to0S6igB6RvmdsWMTtT/exec"
 
