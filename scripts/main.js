@@ -4,7 +4,6 @@ var dataObj = {};
 var $form = $('form#test-form'),
     url = "https://script.google.com/macros/s/AKfycbw6i7GIDgpclcbWV8O231kwvdhJBeJB7to0S6igB6RvmdsWMTtT/exec"
 
-dataObj["id"] = Math.random().toString(36).substr(2, 9);
 
 function buttonHandler(ele) {
     var btn = ele
@@ -52,6 +51,8 @@ function endQuiz() {
     });
     setScores()
     getRec()
+
+    dataObj["id"] = Math.random().toString(36).substr(2, 9);
     dataObj["timestamp"] = new Date().toLocaleString()
 
     var jqxhr = $.ajax({
