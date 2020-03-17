@@ -209,6 +209,14 @@ h6 {
         height: 90%;
     }
 
+    .screen-question {
+        height: 30%;
+    }
+
+    .screen-question-check {
+        height: 85%;
+    }
+
     .button {
         -webkit-appearance: none;
         border-radius: 0;
