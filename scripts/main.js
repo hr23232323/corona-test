@@ -46,8 +46,10 @@ function checkHandler(ele) {
 
 
 function endQuiz() {
-    console.log(dataObj)
     document.getElementById("quizResults").scrollIntoView();
+    setScores()
+    getRec()
+    dataObj["timestamp"] = new Date().toLocaleString()
 
     var jqxhr = $.ajax({
         url: url,
@@ -55,7 +57,6 @@ function endQuiz() {
         dataType: "json",
         data: dataObj,
         success: function (ele) {
-            console.log(dataObj)
             console.log("SENT!", ele)
         }
     })
