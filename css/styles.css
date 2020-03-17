@@ -144,11 +144,13 @@ h6 {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    box-shadow: 0 6px 6px -6px var(--p-text);
 }
 
 .button:hover {
     cursor: pointer;
     background-color: var(--h-bg);
+    box-shadow: 0 10px 6px -6px var(--p-text);
 }
 
 /*-------- CHECKS -------------*/
