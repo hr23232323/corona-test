@@ -15,7 +15,9 @@ function buttonHandler(ele) {
     currentSection = parseInt(form.id.slice(-1))
     if (currentSection < 4) {
         nextSection = "section" + String(currentSection + 2);
-        document.getElementById(nextSection).scrollIntoView();
+        document.getElementById(nextSection).scrollIntoView({
+            behavior: 'smooth'
+        });
     } else {
         // end quiz
         endQuiz()
@@ -34,7 +36,9 @@ function checkHandler(ele) {
     currentSection = parseInt(form.id.slice(-1))
     if (currentSection < 4) {
         nextSection = "section" + String(currentSection + 2);
-        document.getElementById(nextSection).scrollIntoView();
+        document.getElementById(nextSection).scrollIntoView({
+            behavior: 'smooth'
+        });
     } else {
         // end quiz
         endQuiz()
@@ -43,7 +47,9 @@ function checkHandler(ele) {
 
 
 function endQuiz() {
-    document.getElementById("quizResults").scrollIntoView();
+    document.getElementById("quizResults").scrollIntoView({
+        behavior: 'smooth'
+    });
     setScores()
     getRec()
     dataObj["timestamp"] = new Date().toLocaleString()
