@@ -30,8 +30,6 @@ function checkHandler(ele) {
     for (var checkbox of checkboxes) {
         dataObj[checkbox.name] = checkbox.checked
     }
-
-
     currentSection = parseInt(form.id.slice(-1))
     if (currentSection < 4) {
         nextSection = "section" + String(currentSection + 2);
@@ -49,6 +47,11 @@ function endQuiz() {
     document.getElementById("quizResults").scrollIntoView({
         behavior: 'smooth'
     });
+    document.getElementById("section1").style.display = 'none';
+    document.getElementById("section2").style.display = 'none';
+    document.getElementById("section3").style.display = 'none';
+    document.getElementById("section4").style.display = 'none';
+    document.getElementById("section5").style.display = 'none';
     setScores()
     getRec()
 

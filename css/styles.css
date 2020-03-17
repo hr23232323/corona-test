@@ -89,6 +89,12 @@ h6 {
     text-align: center;
 }
 
+.btn-div {
+    display: flex;
+    justify-content: center;
+
+}
+
 /*----------STYLES-----------*/
 .disclaimer {
     font-size: 12px;
@@ -238,5 +244,9 @@ h6 {
 
     .check-label {
         padding: 10px 5px;
+    }
+
+    #result-body {
+        font-size: 14px;
     }
 }
