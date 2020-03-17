@@ -144,13 +144,13 @@ function getRec() {
     } else if (symp_score <= 4 && risk_score > 3) {
         // low symp+cond, high risk; home
         console.log("low symp, high risk")
-        header = "You are at a high risk for serious illness from COVID-19, but are not showing concering symptoms"
+        header = "You are at a high risk for serious illness from COVID-19, but are not showing concerning symptoms"
         body = "Given a combination of your travel history, age, symptoms and/or serious long-term health problems, you are at higher risk for serious illness from COVID-19. It is extra important for you to take actions to reduce your risk of getting sick with the disease. Take extra measures to put distance between yourself and other people to further reduce your risk of being exposed to this new virus."
         links = `Please checkout the following page for more information: <a href="https://www.cdc.gov/coronavirus/2019-ncov/specific-groups/high-risk-complications.html">CDC Guidelines</a>`
     } else {
         // Low symp+cond, low risk; most probably not covid but..
         console.log("Low symp+cond, low risk")
-        header = "You are at a low risk for serious illness from COVID-19 and are not showing concering symptoms"
+        header = "You are at a low risk for serious illness from COVID-19 and are not showing concerning symptoms"
         body = "There is currently no vaccine to prevent coronavirus disease 2019 (COVID-19). The best way to prevent illness is to avoid being exposed to this virus. Put distance between yourself and other people if COVID-19 is spreading in your community. Practice good hygiene such as regularly washing your hands, covering your face if you need to sneeze and clean/disinfect frequently touched surfaces daily."
         links = `Please checkout the following page for more information: <a href="https://www.cdc.gov/coronavirus/2019-ncov/prepare/prevention.html">CDC Guidelines</a>`
     }
