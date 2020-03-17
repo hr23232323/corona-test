@@ -211,6 +211,7 @@ h6 {
 
     .button {
         -webkit-appearance: none;
+        border-radius: 0;
     }
 
     .check-group {
