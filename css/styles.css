@@ -178,6 +178,8 @@ h6 {
     align-items: center;
     text-align: center;
     background-color: var(--l-bg);
+    border-radius: 2px;
+    box-shadow: -2px -2px #888;
 }
 
 .check-label:hover {
@@ -191,6 +193,8 @@ h6 {
 
 .check-option input[type=checkbox]:checked + .check-label {
     background-color: var(--t-bg);
+    box-shadow: -4px -4px #888;
+    transform: translate(2px, 2px);
 }
 
 
