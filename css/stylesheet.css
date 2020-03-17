@@ -3,5 +3,14 @@
     --h-font: "Roboto";
     --p-font: "Roboto";
 
+    /*  COLORS  */
+    --p-bg: hsl(0, 0%, 95%);
+    --s-bg: hsl(211, 20%, 45%);
+    --t-bg: hsl(6, 81%, 66%);
+    --l-bg: hsl(34, 61%, 91%);
+    --h-bg: hsl(217, 20%, 68%);
 
+
+    --p-text: hsl(217, 30%, 28%);
+    --t-text: hsl(217, 8%, 48%);
 }
