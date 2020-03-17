@@ -20,9 +20,9 @@
     <div id="section1" class="content">
         <section class="main-section section">
             <div class="question-content">
-                <h1>Welcome to the Coronavirus screening questionnaire</h1>
-                <h3 class="disclaimer">The Content is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</h3>
-                <button onClick="nextSection(0)">Begin Screening Questionnaire</button>
+                <h1>Welcome to the Coronavirus Screening Questionnaire</h1>
+                <h3 class="disclaimer">While based upon the guidelines and recommendations of the CDC, this Content is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</h3>
+                <button class="button" onClick="nextSection(0)">Begin Screening Questionnaire</button>
 
             </div>
         </section>
@@ -34,8 +34,8 @@
                 <h1>Have you travelled outside the US in the last 4 weeks?</h1>
                 <form id="question1" class="screen-question" onsubmit="return false">
                     <div class="btn-group">
-                        <input name="outside_us_travel" type="button" value="yes" onclick="buttonHandler(this)">
-                        <input name="outside_us_travel" type="button" value="no" onclick="buttonHandler(this)">
+                        <input class="button" name="outside_us_travel" type="button" value="yes" onclick="buttonHandler(this)">
+                        <input class="button" name="outside_us_travel" type="button" value="no" onclick="buttonHandler(this)">
                     </div>
                 </form>
 
@@ -49,13 +49,13 @@
                 <h1>What age group do you fall in?</h1>
                 <form id="question2" class="screen-question" onsubmit="return false">
                     <div class="btn-group">
-                        <input name="age_group" type="button" value="<20" onclick="buttonHandler(this)">
-                        <input name="age_group" type="button" value="20-35" onclick="buttonHandler(this)">
-                        <input name="age_group" type="button" value="35-50" onclick="buttonHandler(this)">
+                        <input class="button" name="age_group" type="button" value="<20" onclick="buttonHandler(this)">
+                        <input class="button" name="age_group" type="button" value="20-35" onclick="buttonHandler(this)">
+                        <input class="button" name="age_group" type="button" value="35-50" onclick="buttonHandler(this)">
                     </div>
                     <div class="btn-group">
-                        <input name="age_group" type="button" value="50-60" onclick="buttonHandler(this)">
-                        <input name="age_group" type="button" value="60+" onclick="buttonHandler(this)">
+                        <input class="button" name="age_group" type="button" value="50-60" onclick="buttonHandler(this)">
+                        <input class="button" name="age_group" type="button" value="60+" onclick="buttonHandler(this)">
                     </div>
                 </form>
 
@@ -100,7 +100,7 @@
                             <label for="cond7" class="check-label">Other Chronic Issues</label>
                         </div>
                     </div>
-                    <input type="button" onclick="checkHandler(this)" value="Next question">
+                    <input class="button" type="button" onclick="checkHandler(this)" value="Next question">
                 </form>
             </div>
         </section>
@@ -148,7 +148,7 @@
                             <label for="symp8" class="check-label">Fatigue</label>
                         </div>
                     </div>
-                    <input type="button" onclick="checkHandler(this)" value="Next question">
+                    <input class="button" type="button" onclick="checkHandler(this)" value="Get Results">
                 </form>
             </div>
         </section>
@@ -156,7 +156,10 @@
     <div id="quizResults" class="content">
         <section class="section">
             <div>
-                <h1>END OF QUIZ</h1>
+                <h1 id="result-header"></h1>
+                <p id="result-body"></p>
+                <p id="result-more-info"></p>
+                <p class="disclaimer-2">While based upon the guidelines and recommendations of the CDC, this Content is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</p>
             </div>
         </section>
     </div>

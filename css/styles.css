@@ -12,6 +12,7 @@ html {
 
 body {
     height: 100%;
+    background-color: var(--p-col);
 }
 
 h1,
@@ -21,6 +22,7 @@ h4,
 h5,
 h6 {
     font-family: var(--h-font), Helvetica, sans-serif;
+    color: var(--p-text);
 }
 
 h3,
@@ -78,6 +80,27 @@ h6 {
     justify-content: center;
 }
 
+
+/*----------STYLES-----------*/
+.disclaimer {
+    font-size: 12px;
+    font-style: italic;
+}
+
+#quizResults h1 {
+    margin-bottom: 20px;
+}
+
+#quizResults p {
+    margin: 10px 0;
+}
+
+#result-more-info {
+    font-weight: bold;
+}
+
+
+
 /*-------- BUTTONS -------------*/
 .btn-group {
     display: flex
@@ -97,6 +120,18 @@ h6 {
 .screen-question-check input[type=button] {
     margin: 20px;
     padding: 10px;
+}
+
+.button {
+    background-color: var(--s-bg);
+    /* Green */
+    border: none;
+    color: var(--p-bg);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
 
 /*-------- CHECKS -------------*/
@@ -135,4 +170,13 @@ h6 {
 
 .check-option input[type=checkbox]:checked + .check-label {
     background-color: hsl(0, 60%, 74%);
+}
+
+
+/*-----------Results----------------*/
+
+.disclaimer-2 {
+    font-size: 10px;
+    font-style: italic;
+
 }
