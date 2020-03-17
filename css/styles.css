@@ -206,6 +206,9 @@ h6 {
 @media screen and (max-width:500px) {
     .check-option {
         margin: 5px;
+    }
 
+    .check-label {
+        padding: 10px 5px;
     }
 }
