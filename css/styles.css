@@ -204,6 +204,11 @@ h6 {
 /*-----------MOBILE---------------*/
 
 @media screen and (max-width:500px) {
+    .section {
+        width: 80%;
+        height: 90%;
+    }
+
     .check-option {
         margin: 5px;
     }
