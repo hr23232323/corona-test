@@ -209,6 +209,10 @@ h6 {
         height: 90%;
     }
 
+    .check-group {
+        margin 5px;
+    }
+
     .check-option {
         margin: 5px;
     }
