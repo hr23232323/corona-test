@@ -4,7 +4,6 @@ var dataObj = {};
 var $form = $('form#test-form'),
     url = "https://script.google.com/macros/s/AKfycbw6i7GIDgpclcbWV8O231kwvdhJBeJB7to0S6igB6RvmdsWMTtT/exec"
 
-dataObj["id"] = Math.random().toString(36).substr(2, 9);
 
 function buttonHandler(ele) {
     var btn = ele
@@ -31,8 +30,6 @@ function checkHandler(ele) {
     for (var checkbox of checkboxes) {
         dataObj[checkbox.name] = checkbox.checked
     }
-
-
     currentSection = parseInt(form.id.slice(-1))
     if (currentSection < 4) {
         nextSection = "section" + String(currentSection + 2);
@@ -50,8 +47,15 @@ function endQuiz() {
     document.getElementById("quizResults").scrollIntoView({
         behavior: 'smooth'
     });
+    document.getElementById("section1").style.display = 'none';
+    document.getElementById("section2").style.display = 'none';
+    document.getElementById("section3").style.display = 'none';
+    document.getElementById("section4").style.display = 'none';
+    document.getElementById("section5").style.display = 'none';
     setScores()
     getRec()
+
+    dataObj["id"] = Math.random().toString(36).substr(2, 9);
     dataObj["timestamp"] = new Date().toLocaleString()
 
     var jqxhr = $.ajax({
