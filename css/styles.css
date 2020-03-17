@@ -95,6 +95,15 @@ h6 {
 
 }
 
+
+.result-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 /*----------STYLES-----------*/
 .disclaimer {
     font-size: 12px;
@@ -249,4 +258,5 @@ h6 {
     #result-body {
         font-size: 14px;
     }
+
 }
