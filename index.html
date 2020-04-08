@@ -8,10 +8,12 @@
     <meta name="keywords" content="Coronavirus">
     <meta name="author" content="Harsh Rana">
     <title>
-        Coronavirus Test
+        Coronavirus Assessment
     </title>
     <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
@@ -21,8 +23,8 @@
         <section class="main-section section">
             <div class="question-content">
                 <h1>Welcome to the Coronavirus Screening Questionnaire</h1>
-                <h3 class="disclaimer">While based upon the guidelines and recommendations of the CDC, this Content is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</h3>
                 <button class="button" onClick="nextSection(0)">Begin Screening Questionnaire</button>
+                <p class="disclaimer-2">While based upon the guidelines and recommendations of the CDC, this content is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</p>
 
             </div>
         </section>
@@ -34,8 +36,8 @@
                 <h1>Have you travelled outside the US in the last 4 weeks?</h1>
                 <form id="question1" class="screen-question" onsubmit="return false">
                     <div class="btn-group">
-                        <input class="button" name="outside_us_travel" type="button" value="YES" onclick="buttonHandler(this)">
-                        <input class="button" name="outside_us_travel" type="button" value="NO" onclick="buttonHandler(this)">
+                        <input class="button opt-button" name="outside_us_travel" type="button" value="Yes" onclick="buttonHandler(this)">
+                        <input class="button opt-button" name="outside_us_travel" type="button" value="No" onclick="buttonHandler(this)">
                     </div>
                 </form>
 
@@ -49,13 +51,11 @@
                 <h1>What age group do you fall in?</h1>
                 <form id="question2" class="screen-question" onsubmit="return false">
                     <div class="btn-group">
-                        <input class="button" name="age_group" type="button" value="<20" onclick="buttonHandler(this)">
-                        <input class="button" name="age_group" type="button" value="20-35" onclick="buttonHandler(this)">
-                        <input class="button" name="age_group" type="button" value="35-50" onclick="buttonHandler(this)">
-                    </div>
-                    <div class="btn-group">
-                        <input class="button" name="age_group" type="button" value="50-60" onclick="buttonHandler(this)">
-                        <input class="button" name="age_group" type="button" value="60+" onclick="buttonHandler(this)">
+                        <input class="button opt-button" name="age_group" type="button" value="<20" onclick="buttonHandler(this)">
+                        <input class="button opt-button" name="age_group" type="button" value="20-35" onclick="buttonHandler(this)">
+                        <input class="button opt-button" name="age_group" type="button" value="35-50" onclick="buttonHandler(this)">
+                        <input class="button opt-button" name="age_group" type="button" value="50-60" onclick="buttonHandler(this)">
+                        <input class="button opt-button" name="age_group" type="button" value="60+" onclick="buttonHandler(this)">
                     </div>
                 </form>
 
@@ -157,9 +157,7 @@
         <section class="section">
             <div class="result-div">
                 <h1 id="result-header"></h1>
-                <p id="result-body"></p>
                 <p id="result-more-info"></p>
-                <p class="disclaimer-2">While based upon the guidelines and recommendations of the CDC, this Content is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</p>
                 <div class="btn-div">
                     <button class="button" onclick="location.href='https://www.covidscan.com/'">Start Over</button>
                 </div>

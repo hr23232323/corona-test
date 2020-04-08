@@ -64,9 +64,17 @@ function endQuiz() {
         dataType: "json",
         data: dataObj,
         success: function (ele) {
-            console.log("SENT!", ele)
+            //console.log("SENT!", ele)
         }
     })
-
-
 }
+
+$(document).ready(function () {
+    $(".opt-button").click(function (e) {
+        for (var btn of $(this).parent().children()) {
+            $(btn).removeClass("btn-selected")
+        }
+
+        $(this).toggleClass("btn-selected")
+    });
+});
